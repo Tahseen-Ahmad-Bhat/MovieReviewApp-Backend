@@ -3,6 +3,7 @@ require("express-async-errors");
 const morgan = require("morgan");
 const { errorHandler } = require("./middlewares/error");
 const cors = require("cors");
+const PORT = process.env.PORT || 8000;
 
 require("dotenv").config();
 require("./db");
@@ -31,6 +32,6 @@ app.use("/*", handlePageNotFound);
 
 app.use(errorHandler);
 
-app.listen(8000, () => {
-  console.log("App is listening on port 8000");
+app.listen(PORT, () => {
+  console.log("App is listening on port " + PORT);
 });
