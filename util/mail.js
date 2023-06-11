@@ -44,7 +44,7 @@ exports.sendEmail = async (name, email, subject, htmlContent) => {
         name,
       },
     ],
-    templateId: 59,
+
     subject: subject,
     htmlContent: htmlContent,
     sender: { name: "Movie Review App", email: process.env.OFFICIAL_EMAIL },
